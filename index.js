@@ -2,7 +2,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 function play(playerChoice) {
-  const choices = ["rock", "paper", "scissors"];
+  const choices = ["stone", "paper", "scissors"];
   const computerChoice = choices[Math.floor(Math.random() * 3)];
 
   let result = "";
@@ -10,8 +10,8 @@ function play(playerChoice) {
   if (playerChoice === computerChoice) {
     result = `Tie! Both chose ${playerChoice}`;
   } else if (
-    (playerChoice === "rock" && computerChoice === "scissors") ||
-    (playerChoice === "paper" && computerChoice === "rock") ||
+    (playerChoice === "stone" && computerChoice === "scissors") ||
+    (playerChoice === "paper" && computerChoice === "stone") ||
     (playerChoice === "scissors" && computerChoice === "paper")
   ) {
     result = `You Win! ${playerChoice} beats ${computerChoice}`;
